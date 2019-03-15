@@ -1,10 +1,11 @@
 workflow "New workflow" {
-  resolves = ["./.github/tmptest"]
+  resolves = ["tmptest"]
   on = "push"
 }
 
 
-action "./.github/tmptest" {
+action "tmptest" {
   uses = "./.github/tmptest"
+  args = "Hello again"
 
 }
