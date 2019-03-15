@@ -12,4 +12,5 @@ LABEL "repository"="http://github.com/staceb/tmptest"
 RUN apt-get -y update && apt-get -y install git
 
 ADD entrypoint.sh /entrypoint.sh
+RUN chmod +x entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
